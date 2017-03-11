@@ -85,6 +85,7 @@ $(document).ready(function() {
         gifs.push(capitalized);
         // a new list in the dropdown is created from the updated array
         renderGifList();
+        $("#gif-input").val("");
     });
 
     // the document is listening to clicks on the gif class and img element class
