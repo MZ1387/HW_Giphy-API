@@ -1,0 +1,50 @@
+body {
+  font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size:14px;
+  line-height:1.42857143;
+  color:#333;
+  background-color:#FF8147;
+  background-image:url(../../assets/img/floyd.png);
+  background-repeat:no-repeat;
+  background-attachment:fixed;
+  background-position:center;
+}
+
+a {
+  color:#fff;
+  text-decoration:none;
+}
+
+.nav-tabs > li > a {
+  margin-right:2px;
+  line-height:1.42857143;
+  border-right:2px solid #fff;
+  border-radius:4px 4px 0 0;
+}
+
+.nav-tabs {
+  border-bottom:2px solid #fff;
+}
+
+a:focus, a:hover {
+  color:#F46C34;
+  text-decoration:underline;
+}
+
+.nav > li > a:focus, .nav > li > a:hover {
+  text-decoration:none;
+  background-color:transparent;
+}
+
+.nav-tabs > li > a:hover {
+  border-color:transparent;
+}
+
+.nav > li > a:focus, .nav > li > a:hover {
+  text-decoration:none;
+  background-color:transparent;
+}
+
+.navbar-inverse .navbar-nav>li>a {
+  color:#fff;
+}

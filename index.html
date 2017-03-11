@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giphy API</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cinzel">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Libre+Baskerville">
+    <link rel="stylesheet" href="assets/css/Navigation-Clean1.css">
+    <link rel="stylesheet" href="assets/css/Navigation-with-Search1.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#"></a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-left">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Jim Carrey Gifs <span class="caret"></span></a>
+                        <ul class="dropdown-menu gifDropdown">
+                            <li><a href="#">Gif Title</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                <form class="navbar-form navbar-right">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Jim Carrey Movie..." id="gif-input">
+                    </div>
+                    <button type="submit" class="btn btn-warning" id="add-gif">Add</button>
+                </form>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+    <div class="container-fluid gifContainer">
+        <div class="row">
+            <div class="col-lg-4 col-lg-offset-0 col-md-4 col-md-offset-0">
+                <div class="thumbnail"><img src="assets/img/floyd.png" id="gif-one">
+                    <div class="caption">
+                        <h3 class="text-center" id="gif-one-rating">Jim Carrey</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-lg-offset-0 col-md-4 col-md-offset-0">
+                <div class="thumbnail"><img src="assets/img/floyd.png" id="gif-two">
+                    <div class="caption">
+                        <h3 class="text-center" id="gif-two-rating">Jim Carrey </h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-lg-offset-0 col-md-4 col-md-offset-0">
+                <div class="thumbnail"><img src="assets/img/floyd.png" id="gif-three">
+                    <div class="caption">
+                        <h3 class="text-center" id="gif-three-rating">Jim Carrey </h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 col-lg-offset-0 col-md-4 col-md-offset-0">
+                <div class="thumbnail"><img src="assets/img/floyd.png" id="gif-four">
+                    <div class="caption">
+                        <h3 class="text-center" id="gif-four-rating">Jim Carrey </h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-lg-offset-0 col-md-4 col-md-offset-0">
+                <div class="thumbnail"><img src="assets/img/floyd.png" id="gif-five">
+                    <div class="caption">
+                        <h3 class="text-center" id="gif-five-rating">Jim Carrey </h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-lg-offset-0 col-md-4 col-md-offset-0">
+                <div class="thumbnail"><img src="assets/img/floyd.png" id="gif-six">
+                    <div class="caption">
+                        <h3 class="text-center" id="gif-six-rating">Jim Carrey </h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 col-lg-offset-0 col-md-4 col-md-offset-0">
+                <div class="thumbnail"><img src="assets/img/floyd.png" id="gif-seven">
+                    <div class="caption">
+                        <h3 class="text-center" id="gif-seven-rating">Jim Carrey </h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-lg-offset-0 col-md-4 col-md-offset-0">
+                <div class="thumbnail"><img src="assets/img/floyd.png" id="gif-eight">
+                    <div class="caption">
+                        <h3 class="text-center" id="gif-eight-rating">Jim Carrey </h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-lg-offset-0 col-md-4 col-md-offset-0">
+                <div class="thumbnail"><img src="assets/img/floyd.png" id="gif-nine">
+                    <div class="caption">
+                        <h3 class="text-center" id="gif-nine-rating">Jim Carrey </h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 col-lg-offset-0 col-md-4 col-md-offset-0">
+                <div class="thumbnail"><img src="assets/img/floyd.png" id="gif-ten">
+                    <div class="caption">
+                        <h3 class="text-center" id="gif-ten-rating">Jim Carrey </h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-lg-offset-0 col-md-4 col-md-offset-0">
+                <div class="thumbnail"><img src="assets/img/floyd.png" id="gif-eleven">
+                    <div class="caption">
+                        <h3 class="text-center" id="gif-eleven-rating">Jim Carrey </h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-lg-offset-0 col-md-4 col-md-offset-0">
+                <div class="thumbnail"><img src="assets/img/floyd.png" id="gif-twelve">
+                    <div class="caption">
+                        <h3 class="text-center" id="gif-twelve-rating">Jim Carrey </h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/api.js"></script>
+</body>
+
+</html>
