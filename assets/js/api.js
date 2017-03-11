@@ -6,6 +6,24 @@ $(document).ready(function() {
     var thumbnails = ["gif-one", "gif-two", "gif-three", "gif-four", "gif-five", "gif-six", "gif-seven", "gif-eight", "gif-nine", "gif-ten", "gif-eleven", "gif-twelve"];
     var thumbnailsRating = ["gif-one-rating", "gif-two-rating", "gif-three-rating", "gif-four-rating", "gif-five-rating", "gif-six-rating", "gif-seven-rating", "gif-eight-rating", "gif-nine-rating", "gif-ten-rating", "gif-eleven-rating", "gif-twelve-rating"];
 
+    // function creates gif in the ajax response
+    function createGifs(response) {
+        // for loop takes the response data and fills it with information for the orresponding thumbnail
+        for (var i = 0; i < response.data.length; i++) {
+            // the gifURL animated and still paths from the response
+            var gifURL = response.data[i].images.original.url;
+            var gifURLStill = response.data[i].images.original_still.url;
+            // appending the response information to the thumbnail
+            $("#" + thumbnails[i]).attr("src", gifURLStill);
+            $("#" + thumbnails[i]).attr("data-still", gifURLStill);
+            $("#" + thumbnails[i]).attr("data-animate", gifURL);
+            $("#" + thumbnails[i]).attr("data-state", "still");
+            $("#" + thumbnails[i]).addClass("gifSize");
+            var rating = response.data[i].rating;
+            $("#" + thumbnailsRating[i]).text("Rating: " + rating.toUpperCase());
+        };
+    };
+
     // function  executes ajax call and displays gifs associated with the title when response is returnes
     function displayGifs() {
         // the variables that make up the query
@@ -18,21 +36,7 @@ $(document).ready(function() {
             url: queryURL,
             method: "GET"
         }).done(function(response) {
-
-            // for loop takes the response data and fills it with information for the orresponding thumbnail
-            for (var i = 0; i < response.data.length; i++) {
-                // the gifURL animated and still paths from the response
-                var gifURL = response.data[i].images.original.url;
-                var gifURLStill = response.data[i].images.original_still.url;
-                // appending the response information to the thumbnail
-                $("#" + thumbnails[i]).attr("src", gifURLStill);
-                $("#" + thumbnails[i]).attr("data-still", gifURLStill);
-                $("#" + thumbnails[i]).attr("data-animate", gifURL);
-                $("#" + thumbnails[i]).attr("data-state", "still");
-                $("#" + thumbnails[i]).addClass("gifSize");
-                var rating = response.data[i].rating;
-                $("#" + thumbnailsRating[i]).text("Rating: " + rating.toUpperCase());
-            };
+            createGifs(response);
         });
     };
 
